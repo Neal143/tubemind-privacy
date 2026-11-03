@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--
+=============================================================================
+Tên file: docs/privacy-policy.html
+Last update: 02/11/2026 20:07 (GMT+7)
+Vai trò: Trang tĩnh công khai hiển thị chính sách bảo mật của TubeMind phục vụ kiểm duyệt Chrome Web Store
+Được sử dụng khi nào: Đưa lên GitHub Pages hoặc bất kỳ hosting công khai nào để lấy public URL cho CWS
+Output: Trang web chuẩn responsive, hỗ trợ chế độ đọc rõ ràng, bảo vệ quyền riêng tư người dùng
+Tóm tắt logic hoạt động: Trình bày chi tiết phạm vi quyền hạn (permissions), cách xử lý dữ liệu transcript, Google session và hệ thống kiểm tra bản quyền Pro theo đúng chính sách Limited Use của Chrome Web Store.
+=============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - TubeMind: YouTube Transcript &amp; NotebookLM</title>
+  <meta name="description" content="Official Privacy Policy for TubeMind: YouTube Transcript &amp; NotebookLM Chrome Extension.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --heading: #ffffff;
+      --primary: #38bdf8;
+      --primary-hover: #0284c7;
+      --border: #334155;
+      --badge-bg: #0369a1;
+      --code-bg: #0b1120;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --card-bg: #ffffff;
+        --text: #334155;
+        --text-muted: #64748b;
+        --heading: #0f172a;
+        --primary: #0284c7;
+        --primary-hover: #0369a1;
+        --border: #e2e8f0;
+        --badge-bg: #e0f2fe;
+        --code-bg: #f1f5f9;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background-color: var(--badge-bg);
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--heading);
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    p, ul {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13.5px;
+      background-color: var(--code-bg);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--primary);
+    }
+    .highlight-box {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Chrome Web Store Compliance</span>
+      <h1>Privacy Policy for TubeMind</h1>
+      <p class="meta">
+        <strong>Official Title:</strong> TubeMind: YouTube Transcript &amp; NotebookLM<br>
+        <strong>Localized Title (Vietnamese):</strong> TubeMind: Tóm tắt YouTube &amp; NotebookLM<br>
+        <strong>Last Updated:</strong> 02/11/2026 (GMT+7)
+      </p>
+    </header>
+
+    <section>
+      <h2>1. Introduction</h2>
+      <p>
+        <strong>TubeMind: YouTube Transcript &amp; NotebookLM</strong> ("TubeMind", "we", "our", or "the extension") is committed to protecting user privacy and ensuring full transparency. This policy details what data the extension accesses, how it is processed, and how your privacy is safeguarded in strict compliance with the Google Chrome Web Store Developer Program Policies, including the Single Purpose and Limited Use requirements.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Permissions &amp; Data Usage</h2>
+
+      <h3>2.1. YouTube Transcript &amp; Metadata Processing</h3>
+      <ul>
+        <li><strong>Permissions Used:</strong> <code>activeTab</code> and <code>host_permissions</code> for <code>https://www.youtube.com/*</code> and <code>https://youtube.com/*</code>.</li>
+        <li><strong>Purpose:</strong> To extract video captions (transcripts), video titles, and chapter timestamps from the active YouTube watch page.</li>
+        <li><strong>Data Handling:</strong> Transcript texts and video metadata are processed locally in your browser memory. We <strong>do not</strong> transmit, record, or store your watched videos, browsing history, or transcript contents on external tracking servers.</li>
+      </ul>
+
+      <h3>2.2. Google NotebookLM Integration &amp; Account Switching</h3>
+      <ul>
+        <li><strong>Permissions Used:</strong> <code>host_permissions</code> for <code>https://notebook.google.com/*</code>, <code>https://notebooklm.google.com/*</code>, and <code>https://accounts.google.com/*</code>.</li>
+        <li><strong>Purpose:</strong> To list your available notebooks, append YouTube transcripts as notebook sources, switch between your active signed-in Google accounts, and stream interactive AI chat responses directly beside the video player.</li>
+        <li><strong>Authentication:</strong> All requests to Google services are made directly from your browser using your active, legitimate Google web session. We <strong>never</strong> intercept, collect, or transmit your Google account passwords or login cookies to any server.</li>
+      </ul>
+
+      <h3>2.3. License Verification &amp; Shared Free Trial Quota Management</h3>
+      <ul>
+        <li><strong>Data Accessed:</strong> Your active Google account email address, the list of signed-in Google account emails in the current browser profile (<code>clusterEmails</code>), and a pseudonymous device identifier generated locally (<code>deviceId</code>, e.g., <code>ytedev_...</code>).</li>
+        <li><strong>Purpose:</strong> To verify active Pro Pass licenses (<code>plan_3m</code>, <code>plan_1y</code>, <code>plan_v1</code>), validate gift codes/activation keys, and maintain trial quota integrity for the NotebookLM chat companion.</li>
+        <li><strong>Data Sharing &amp; Protection:</strong> These identifiers and entitlement timestamps are transmitted exclusively via HTTPS to our dedicated database on Supabase. We <strong>do not sell, rent, or transfer</strong> user emails or device IDs to third parties, advertising brokers, data brokers, or credit reporting agencies.</li>
+      </ul>
+
+      <h3>2.4. Local Extension Storage</h3>
+      <ul>
+        <li><strong>Permissions Used:</strong> <code>storage</code> (<code>chrome.storage.local</code> and <code>chrome.storage.sync</code>).</li>
+        <li><strong>Purpose:</strong> To store user preferences locally, including UI theme (Light/Dark mode), panel height, custom prompt templates, source prefix titles, device ID, and cached license verification tokens.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Third-Party Services</h2>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>YouTube &amp; Google NotebookLM:</strong> Interacted with directly from your browser client under Google's Terms of Service and Privacy Policy.</li>
+          <li><strong>Supabase:</strong> Encrypted backend API provider used strictly for license checking and free trial quota synchronization.</li>
+          <li><strong>VietQR / SePay:</strong> Used strictly for secure QR code generation for users opting to upgrade to the Pro plan.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Data Retention &amp; User Control</h2>
+      <p>
+        Users have complete control over their local data. Removing the extension or clearing your browser's site data immediately purges all locally stored preferences, cached transcripts, and device identifiers. You may request deletion of any associated license records at any time.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Limited Use Disclosure</h2>
+      <p>
+        TubeMind adheres to the Chrome Web Store Developer Program Policies. The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Contact &amp; Support</h2>
+      <p>
+        For inquiries regarding privacy, data deletion, or technical support, please contact the developer via the official Support tab on the Chrome Web Store listing page or via our project repository.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 TubeMind. All rights reserved. Designed for Google Chrome.</p>
+    </footer>
+  </div>
+</body>
+</html>
